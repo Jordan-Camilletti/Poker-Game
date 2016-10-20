@@ -6,7 +6,7 @@ public class Card {//This creates a card with 4 values
 	public int number2=0;//1-13
 	public int suit2=0;//1-4
 	public Card(){
-		double cardNum=Math.random();
+		double cardNum=Math.random();//Assigning said vars based on a rng
 		if(cardNum<=0.0192307692308){
 			number1="Ace";
 			number2=1;
