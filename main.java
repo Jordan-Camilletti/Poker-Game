@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clubs,dimond(in that order)
 	public static String checkCard2(Card card1,Card card2){//This checks two cards
 		/*1 pair*/if(card1.numArr[0]==card2.numArr[0]){
 			return "One Pair";
@@ -11,22 +11,22 @@ public class Main {
 	}
 	
 	public static String checkCard3(Card card1,Card card2,Card card3){
-		/*3 of a kind*/if(card1.number2==card2.number2&&card2.number2==card3.number2){
+		/*3 of a kind*/if(card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]){
 			return "3 of a Kind";
-		/*1 pair*/}else if(card1.number2==card2.number2||card1.number2==card3.number2||card2.number2==card3.number2){
+		/*1 pair*/}else if(card1.numArr[0]==card2.numArr[0]||card1.numArr[0]==card3.numArr[0]||card2.numArr[0]==card3.numArr[0]){
 			return "One Pair";
 		}
 		return "High Card";
 	}
 	
 	public static String checkCard4(Card card1,Card card2,Card card3,Card card4){
-		/*4 of a kind*/if(card1.number2==card2.number2&&card2.number2==card3.number2&&card3.number2==card4.number2){
+		/*4 of a kind*/if(card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]){
 			return "4 of a Kind";
-		/*3 of a kind*/}else if((card1.number2==card2.number2&&card2.number2==card3.number2)||(card1.number2==card2.number2&&card2.number2==card4.number2)||(card1.number2==card3.number2&&card3.number2==card4.number2)||(card2.number2==card3.number2&&card3.number2==card4.number2)){
+		/*3 of a kind*/}else if((card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card1.numbArr[0]==card2.numArr[0]&&card2.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&card3.numArr[0]==card4.numArr[0])){
 			return "3 of a Kind";
-		/*2 pair*/}else if((card1.number2==card2.number2&&card3.number2==card4.number2)||(card2.number2==card3.number2&&card1.number2==card4.number2)||(card3.number2==card4.number2&&card1.number2==card2.number2)||(card1.number2==card3.number2&&card2.number2==card4.number2)||(card1.number2==card4.number2&&card2.number2==card3.number2)||(card2.number2==card4.number2&&card1.number2==card3.number2)){
+		/*2 pair*/}else if((card1.numArr[0]==card2.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&&card1.numArr[0]==card4.numArr[0])||(card3.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card2.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card2.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card4.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card2.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card3.numArr[0])){
 			return "2 Pair";
-		}else if(card1.number2==card2.number2||card1.number2==card3.number2||card1.number2==card4.number2||card2.number2==card3.number2||card2.number2==card4.number2||card3.number2==card4.number2){
+		}else if(card1.numArr[0]==card2.numArr[0]||/*PICK UP HERE*/card1.number2==card3.number2||card1.number2==card4.number2||card2.number2==card3.number2||card2.number2==card4.number2||card3.number2==card4.number2){
 			return "One Pair";
 		}
 		return "High Card";
