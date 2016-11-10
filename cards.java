@@ -51,10 +51,10 @@ public class Card {//This creates a card with 4 values
 			numArr[0]=[9];
 			numArr[1]=[1];
 		}else if(cardNum>0.173076923078&&cardNum<=0.192307692309){
-			strArr[0]=[];
-			StrArr[1]=[];
-			numArr[0]=[];
-			numArr[1]=[];
+			strArr[0]=["Ten"];
+			StrArr[1]=["Spades"];
+			numArr[0]=[10];
+			numArr[1]=[1];
 		}else if(cardNum>0.192307692309&&cardNum<=0.21153846154){
 			strArr[0]=["Jack"];
 			StrArr[1]=[11];
