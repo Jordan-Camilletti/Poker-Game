@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static String checkCard2(Card card1,Card card2){//This checks two cards
-		/*1 pair*/if(card1.number2==card2.number2){
+		/*1 pair*/if(card1.numArr[0]==card2.numArr[0]){
 			return "One Pair";
 		}
 		return "High Card";
