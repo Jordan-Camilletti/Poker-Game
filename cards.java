@@ -1,69 +1,67 @@
 package main;
 
 public class Card {//This creates a card with 4 values
-	public String number1="";//"ace","two","jack",ect
-	public String suit1="";//"spades","clubs",ect
-	public int number2=0;//1-13
-	public int suit2=0;//1-4
+	public String[] strArr=new String[2];//Used for telling the user stuff [Number1, Suit1]
+	public int[] numArr=new int[2];//Used for grading stuff  [Number2, Suit2]
 	public Card(){
 		double cardNum=Math.random();//Assigning said vars based on a rng
 		if(cardNum<=0.0192307692308){
-			number1="Ace";
-			number2=1;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Ace"];
+			strArr[1]=["Spades];
+			numArr[0]=[1];
+			numArr[1]=[1];
 		}else if(cardNum>0.0192307692308&&cardNum<=0.0384615384616){
-			number1="Two";
-			number2=2;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Two"];
+			StrArr[1]=["Spades];
+			numArr[0]=[2];
+			numArr[1]=[1];
 		}else if(cardNum>0.0384615384616&&cardNum<=0.0576923076924){
-			number1="Three";
-			number2=3;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Three"];
+			StrArr[1]=["Spades"];
+			numArr[0]=[3];
+			numArr[1]=[1];
 		}else if(cardNum>0.0576923076924&&cardNum<=0.0769230769232){
-			number1="Four";
-			number2=4;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Four"];
+			StrArr[1]=["Spades"];
+			numArr[0]=[4];
+			numArr[1]=[1];
 		}else if(cardNum>0.0769230769232&&cardNum<=0.096153846154){
-			number1="Five";
-			number2=5;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Five"];
+			StrArr[1]=["Spades"];
+			numArr[0]=[5];
+			numArr[1]=[1];
 		}else if(cardNum>0.096153846154&&cardNum<=0.115384615385){
-			number1="Six";
-			number2=6;
-			suit1="Spades";
-			suit2=1;
+			strArr[0]=["Six"];
+			StrArr[1]=["Spades"];
+			numArr[0]=[6];
+			numArr[1]=[1];
 		}else if(cardNum>0.115384615385&&cardNum<=0.134615384616){
-			number1="Seven";
+			strArr[0]="Seven";
 			number2=7;
 			suit1="Spades";
 			suit2=1;
 		}else if(cardNum>0.134615384616&&cardNum<=0.153846153847){
-			number1="Eight";
+			strArr[0]="Eight";
 			number2=8;
 			suit1="Spades";
 			suit2=1;
 		}else if(cardNum>0.153846153847&&cardNum<=0.173076923078){
-			number1="Nine";
+			strArr[0]="Nine";
 			number2=9;
 			suit1="Spades";
 			suit2=1;
 		}else if(cardNum>0.173076923078&&cardNum<=0.192307692309){
-			number1="Ten";
+			strArr[0]="Ten";
 			number2=10;
 			suit1="Spades";
 			suit2=1;
 		}else if(cardNum>0.192307692309&&cardNum<=0.21153846154){
-			number1="Jack";
+			strArr[0]="Jack";
 			number2=11;
 			suit1="Spades";
 			suit2=1;
 		}else if(cardNum>0.21153846154&&cardNum<=0.230769230771){
-			number1="Queen";
+			strArr[0]="Queen";
 			number2=12;
 			suit1="Spades";
 			suit2=1;
@@ -270,6 +268,6 @@ public class Card {//This creates a card with 4 values
 		}
 	}
 	public String cardName(){//5 of Spades, Jack of Clubs, ect
-		return(number1+" of "+suit1);
+		return(strArr[0]+" of "+strArr[1]);
 	}
 }
