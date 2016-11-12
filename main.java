@@ -22,7 +22,7 @@ public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clu
 	public static String checkCard4(Card card1,Card card2,Card card3,Card card4){
 		/*4 of a kind*/if(card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]){
 			return "4 of a Kind";
-		/*3 of a kind*/}else if((card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card1.numbArr[0]==card2.numArr[0]&&card2.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&card3.numArr[0]==card4.numArr[0])){
+		/*3 of a kind*/}else if((card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&card3.numArr[0]==card4.numArr[0])){
 			return "3 of a Kind";
 		/*2 pair*/}else if((card1.numArr[0]==card2.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&&card1.numArr[0]==card4.numArr[0])||(card3.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card2.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card2.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card4.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card2.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card3.numArr[0])){
 			return "2 Pair";
@@ -40,60 +40,60 @@ public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clu
 				return 9;
 			}*/
 			return "Flush6";
-		/*4 of a kind*/}else if((/*1*/card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]&&card4.number2==card5.number2)||(/*2*/card1.number2==card3.number2&&card3.number2==card4.number2&&card4.number2==card5.number2)||(/*3*/card1.number2==card2.number2&&card2.number2==card4.number2&&card4.number2==card5.number2)||(/*4*/card1.number2==card2.number2&&card2.number2==card3.number2&&card3.number2==card5.number2)||(/*5*/card1.number2==card2.number2&&card2.number2==card3.number2&&card3.number2==card4.number2)){
+		/*4 of a kind*/}else if((/*1*/card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0])||(/*2*/card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0])||(/*3*/card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0])||(/*4*/card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card5.numArr[0])||(/*5*/card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])){
 			return "4 of a Kind8";
-		/*full house*/}else if(card1.numArr[0]==card2.number2&&card3.number2==card4.number2&&card4.number2==card5.number2){
+		/*full house*/}else if(card1.numArr[0]==card2.numArr[0]&&card3.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card1.number2==card3.numArr[0]&&card2.number2==card4.number2&&card4.number2==card5.number2){
+		}else if(card1.numArr[0]==card3.numArr[0]&&card2.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card1.number2==card4.numArr[0]&&card2.number2==card3.number2&&card2.number2==card5.number2){
+		}else if(card1.numArr[0]==card4.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card2.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card1.number2==card5.numArr[0]&&card2.number2==card3.number2&&card3.number2==card4.number2){
+		}else if(card1.numArr[0]==card5.numArr[0]&&card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]){
 			return "Full House7";
-		}else if(card2.number2==card3.number2&&card1.number2==card4.number2&&card4.number2==card5.number2){
+		}else if(card2.numArr[0]==card3.numArr[0]&&card1.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card2.number2==card4.number2&&card1.number2==card3.number2&&card3.number2==card5.number2){
+		}else if(card2.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card2.number2==card5.number2&&card1.number2==card3.number2&&card3.number2==card4.number2){
+		}else if(card2.numArr[0]==card5.numArr[0]&&card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0]){
 			return "Full House7";
-		}else if(card3.number2==card4.number2&&card1.number2==card2.number2&&card2.number2==card5.number2){
+		}else if(card3.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card5.numArr[0]){
 			return "Full House7";
-		}else if(card4.number2==card5.number2&&card1.number2==card2.number2&&card2.number2==card3.number2){
+		}else if(card4.numArr[0]==card5.numArr[0]&&card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0]){
 			return "Full House7";
 		/*straight}else if(straight){
 	WORKING ON		return 5;*/
-		/*3 of a kind*/}else if((card1.number2==card2.number2&&card2.number2==card3.number2)||(card1.number2==card2.number2&&card1.number2==card4.number2)||(card1.number2==card2.number2&&card2.number2==card5.number2)||(card1.number2==card3.number2&&card3.number2==card4.number2)||(card1.number2==card3.number2&&card3.number2==card5.number2)||(card1.number2==card4.number2&&card1.number2==card5.number2)||(card2.number2==card3.number2&&card3.number2==card4.number2)||(card2.number2==card3.number2&&card3.number2==card5.number2)||(card2.number2==card4.number2&&card4.number2==card5.number2)||(card3.number2==card4.number2&&card4.number2==card5.number2)){
+		/*3 of a kind*/}else if((card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card3.numArr[0])||(card1.numArr[0]==card2.numArr[0]&&card1.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card2.numArr[0]&&card2.numArr[0]==card5.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card1.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card5.numArr[0])||(card1.numArr[0]==card4.numArr[0]&&card1.numArr[0]==card5.numArr[0])||(card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card4.numArr[0])||(card2.numArr[0]==card3.numArr[0]&&card3.numArr[0]==card5.numArr[0])||(card2.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0])||(card3.numArr[0]==card4.numArr[0]&&card4.numArr[0]==card5.numArr[0])){
 			return "3 of a Kind4";
-		/*2 pair*/}else if(card1.number2==card2.number2){
-			if(card3.number2==card4.number2||card3.number2==card5.number2||card4.number2==card5.number2){
+		/*2 pair*/}else if(card1.numArr[0]==card2.numArr[0]){
+			if(card3.numArr[0]==card4.numArr[0]||card3.numArr[0]==card5.numArr[0]||card4.numArr[0]==card5.numArr[0]){
 				return "2 Pair3";
 			}
-		}else if(card1.number2==card3.number2){
-			if(card2.number2==card4.number2||card2.number2==card5.number2||card4.number2==card5.number2){
+		}else if(card1.numArr[0]==card3.numArr[0]){
+			if(card2.numArr[0]==card4.numArr[0]||card2.numArr[0]==card5.numArr[0]||card4.numArr[0]==card5.numArr[0]){
 				return "2 Pair3";
 			}
-		}else if(card1.number2==card4.number2){
-			if(card2.number2==card3.number2||card2.number2==card5.number2||card3.number2==card5.number2){
+		}else if(card1.numArr[0]==card4.numArr[0]){
+			if(card2.numArr[0]==card3.numArr[0]||card2.numArr[0]==card5.numArr[0]||card3.numArr[0]==card5.numArr[0]){
 				return "2 Pair3";
 			}
-		}else if(card1.number2==card5.number2){
-			if(card2.number2==card3.number2||card2.number2==card4.number2||card3.number2==card4.number2){
+		}else if(card1.numArr[0]==card5.numArr[0]){
+			if(card2.numArr[0]==card3.numArr[0]||card2.numArr[0]==card4.numArr[0]||card3.numArr[0]==card4.numArr[0]){
 				return "2 Pair3";
 			}
-		}else if(card2.number2==card3.number2){
-			if(card4.number2==card5.number2){
+		}else if(card2.numArr[0]==card3.numArr[0]){
+			if(card4.numArr[0]==card5.numArr[0]){
 				return "2 Pair3";
 			}
-		}else if(card2.number2==card4.number2){
-			if(card3.number2==card5.number2){
+		}else if(card2.numArr[0]==card4.numArr[0]){
+			if(card3.numArr[0]==card5.numArr[0]){
 				return "2 Pair3";
 			}
-		/*2 pairs*/}else if(card2.number2==card5.number2){
-			if(card3.number2==card4.number2){
+		/*2 pairs*/}else if(card2.numArr[0]==card5.numArr[0]){
+			if(card3.numArr[0]==card4.numArr[0]){
 				return "2 Pair3";
 			}
 		/*one pair*/}
-		if(card1.number2==card2.number2||card1.number2==card3.number2||card1.number2==card4.number2||card1.number2==card5.number2||card2.number2==card3.number2||card2.number2==card4.number2||card2.number2==card5.number2||card3.number2==card4.number2||card3.number2==card5.number2||card4.number2==card5.number2){
+		if(card1.numArr[0]==card2.numArr[0]||card1.numArr[0]==card3.numArr[0]||card1.numArr[0]==card4.numArr[0]||card1.numArr[0]==card5.numArr[0]||card2.numArr[0]==card3.numArr[0]||card2.numArr[0]==card4.numArr[0]||card2.numArr[0]==card5.numArr[0]||card3.numArr[0]==card4.numArr[0]||card3.numArr[0]==card5.numArr[0]||card4.numArr[0]==card5.numArr[0]){
 			return "One Pair2";
 		}
 		return "High Card1";
