@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clubs,dimond(in that order)
+public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clubs,dimond(in that order)
 	public static String checkCard2(Card card1,Card card2){//This checks two cards
 		/*1 pair*/if(card1.numArr[0]==card2.numArr[0]){
 			return "One Pair";
@@ -162,7 +162,7 @@ public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clu
 			int oppCardScore=Integer.parseInt(str1[str1.length-1]);
 			int x=0;
 			int bet=0;//These 2 vars are for the betting stuff
-			int amount=0;
+			int amount;
 			if(x==0){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName()+"\n");
 				x++;
