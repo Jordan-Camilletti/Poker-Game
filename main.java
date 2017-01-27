@@ -169,13 +169,14 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			int x=0;
 			int bet=0;//These 2 vars are for the betting stuff
 			int amount;
-                        int oppBet=oppBet(oppScore);
+                        int oppBet;
 			if(x==0){
                                 bet+=10;//This line was added in after origional creation
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName()+"\n");
 				x++;
 			}
 			while(x==1){//Playing with both your cards
+                                oppBet=oppBet(oppScore);
                                 if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
                                     String raiseChoice="";//
@@ -233,10 +234,10 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==2){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+"\n");
-                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==3){//Playing with your cards and 1 dealer card
+                                oppBet=oppBet(oppScore);
                                 if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
                                     String raiseChoice="";//
@@ -294,10 +295,10 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==4){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+" and a "+dealCard2.cardName()+"\n");
-                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==5){//Playing with your cards and 2 dealer cards
+                                oppBet=oppBet(oppScore);
                                 if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
                                     String raiseChoice="";//
@@ -355,10 +356,10 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==6){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+", a "+dealCard2.cardName()+" and a "+dealCard3.cardName()+"\n");
-                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==7){//Playing with your cards and 3 dealer cards
+                                oppBet=oppBet(oppScore);
                                 if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
                                     String raiseChoice="";//
