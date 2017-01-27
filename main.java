@@ -169,15 +169,33 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			int x=0;
 			int bet=0;//These 2 vars are for the betting stuff
 			int amount;
+                        int oppBet;
 			if(x==0){
                                 bet+=10;//This line was added in after origional creation
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName()+"\n");
 				x++;
 			}
 			while(x==1){//Playing with both your cards
-                                if(oppBet(oppScore)!=0){
-                                    bet+=oppBet(oppScore);//WORKING ON THIS
-                                }
+                                oppBet=oppBet(oppScore);//These were added after origional creation
+                                if(oppBet!=0){//
+                                    bet+=oppBet;//
+                                    System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
+                                    Scanner scr=new Scanner(System.in);//
+                                    String raiseChoice=(scr.nextLine()).toUpperCase();//
+                                    if(raiseChoice.equals("FOLD")){//
+                                        System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
+					myScore=myScore-bet;//
+					oppScore=oppScore+bet;//
+					break;//
+                                    }else if(raiseChoice.equals("RAISE")){//
+                                        if(bet>myScore){//
+                                            System.out.print("You don't have that much money.\n");//
+                                        }else{//
+                                            System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                            x++;//
+                                        }//
+                                    }//
+                                }//These were added after origional creation
 				System.out.print("Do you want to bet, hold, view, or fold?\n");
 				Scanner scr=new Scanner(System.in);
 				String choice=(scr.nextLine()).toUpperCase();
