@@ -192,7 +192,6 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
                                             System.out.print("You don't have that much money.\n");//
                                         }else{//
                                             System.out.print("Pot's raised to "+(bet*2)+"\n");//
-                                            x++;//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -249,7 +248,6 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
                                             System.out.print("You don't have that much money.\n");//
                                         }else{//
                                             System.out.print("Pot's raised to "+(bet*2)+"\n");//
-                                            x++;//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -306,7 +304,6 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
                                             System.out.print("You don't have that much money.\n");//
                                         }else{//
                                             System.out.print("Pot's raised to "+(bet*2)+"\n");//
-                                            x++;//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -363,7 +360,6 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
                                             System.out.print("You don't have that much money.\n");//
                                         }else{//
                                             System.out.print("Pot's raised to "+(bet*2)+"\n");//
-                                            x++;//
                                         }//
                                     }//
                                 }//These were added after origional creation
