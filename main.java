@@ -169,29 +169,33 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			int x=0;
 			int bet=0;//These 2 vars are for the betting stuff
 			int amount;
-                        int oppBet;
+                        int oppBet=oppBet(oppScore);
 			if(x==0){
                                 bet+=10;//This line was added in after origional creation
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName()+"\n");
 				x++;
 			}
 			while(x==1){//Playing with both your cards
-                                oppBet=oppBet(oppScore);//These were added after origional creation
-                                if(oppBet!=0){//
+                                if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
-                                    System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
-                                    Scanner scr=new Scanner(System.in);//
-                                    String raiseChoice=(scr.nextLine()).toUpperCase();//
-                                    if(raiseChoice.equals("FOLD")){//
-                                        System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
-					myScore=myScore-bet;//
-					oppScore=oppScore+bet;//
-					break;//
-                                    }else if(raiseChoice.equals("RAISE")){//
-                                        if(bet>myScore){//
-                                            System.out.print("You don't have that much money.\n");//
-                                        }else{//
-                                            System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                    String raiseChoice="";//
+                                    int i=0;//
+                                    while(i==0){//
+                                        System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
+                                        Scanner scr=new Scanner(System.in);//
+                                        raiseChoice=(scr.nextLine()).toUpperCase();//
+                                        if(raiseChoice.equals("FOLD")){//
+                                            System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
+                                            myScore=myScore-bet;//
+                                            oppScore=oppScore+bet;//
+                                            i=1;//
+                                        }else if(raiseChoice.equals("RAISE")){//
+                                            if(bet>myScore){//
+                                                System.out.print("You don't have that much money.\n");//
+                                            }else{//
+                                                System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                                i=1;//
+                                            }//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -229,25 +233,30 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==2){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+"\n");
+                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==3){//Playing with your cards and 1 dealer card
-                                oppBet=oppBet(oppScore);//These were added after origional creation
-                                if(oppBet!=0){//
+                                if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
-                                    System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
-                                    Scanner scr=new Scanner(System.in);//
-                                    String raiseChoice=(scr.nextLine()).toUpperCase();//
-                                    if(raiseChoice.equals("FOLD")){//
-                                        System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
-					myScore=myScore-bet;//
-					oppScore=oppScore+bet;//
-					break;//
-                                    }else if(raiseChoice.equals("RAISE")){//
-                                        if(bet>myScore){//
-                                            System.out.print("You don't have that much money.\n");//
-                                        }else{//
-                                            System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                    String raiseChoice="";//
+                                    int i=0;//
+                                    while(i==0){//
+                                        System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
+                                        Scanner scr=new Scanner(System.in);//
+                                        raiseChoice=(scr.nextLine()).toUpperCase();//
+                                        if(raiseChoice.equals("FOLD")){//
+                                            System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
+                                            myScore=myScore-bet;//
+                                            oppScore=oppScore+bet;//
+                                            i=1;//
+                                        }else if(raiseChoice.equals("RAISE")){//
+                                            if(bet>myScore){//
+                                                System.out.print("You don't have that much money.\n");//
+                                            }else{//
+                                                System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                                i=1;//
+                                            }//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -285,25 +294,30 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==4){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+" and a "+dealCard2.cardName()+"\n");
+                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==5){//Playing with your cards and 2 dealer cards
-                                oppBet=oppBet(oppScore);//These were added after origional creation
-                                if(oppBet!=0){//
+                                if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
-                                    System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
-                                    Scanner scr=new Scanner(System.in);//
-                                    String raiseChoice=(scr.nextLine()).toUpperCase();//
-                                    if(raiseChoice.equals("FOLD")){//
-                                        System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
-					myScore=myScore-bet;//
-					oppScore=oppScore+bet;//
-					break;//
-                                    }else if(raiseChoice.equals("RAISE")){//
-                                        if(bet>myScore){//
-                                            System.out.print("You don't have that much money.\n");//
-                                        }else{//
-                                            System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                    String raiseChoice="";//
+                                    int i=0;//
+                                    while(i==0){//
+                                        System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
+                                        Scanner scr=new Scanner(System.in);//
+                                        raiseChoice=(scr.nextLine()).toUpperCase();//
+                                        if(raiseChoice.equals("FOLD")){//
+                                            System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
+                                            myScore=myScore-bet;//
+                                            oppScore=oppScore+bet;//
+                                            i=1;//
+                                        }else if(raiseChoice.equals("RAISE")){//
+                                            if(bet>myScore){//
+                                                System.out.print("You don't have that much money.\n");//
+                                            }else{//
+                                                System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                                i=1;//
+                                            }//
                                         }//
                                     }//
                                 }//These were added after origional creation
@@ -341,25 +355,30 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			if(x==6){
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName());
 				System.out.print("\nDealer has a "+dealCard1.cardName()+", a "+dealCard2.cardName()+" and a "+dealCard3.cardName()+"\n");
+                                oppBet=oppBet(oppScore);
 				x++;
 			}
 			while(x==7){//Playing with your cards and 3 dealer cards
-                                oppBet=oppBet(oppScore);//These were added after origional creation
-                                if(oppBet!=0){//
+                                if(oppBet!=0){//These were added after origional creation
                                     bet+=oppBet;//
-                                    System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
-                                    Scanner scr=new Scanner(System.in);//
-                                    String raiseChoice=(scr.nextLine()).toUpperCase();//
-                                    if(raiseChoice.equals("FOLD")){//
-                                        System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
-					myScore=myScore-bet;//
-					oppScore=oppScore+bet;//
-					break;//
-                                    }else if(raiseChoice.equals("RAISE")){//
-                                        if(bet>myScore){//
-                                            System.out.print("You don't have that much money.\n");//
-                                        }else{//
-                                            System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                    String raiseChoice="";//
+                                    int i=0;//
+                                    while(i==0){//
+                                        System.out.print("Opponent raised pot by "+oppBet+"\nDo you raise or fold?\n");//
+                                        Scanner scr=new Scanner(System.in);//
+                                        raiseChoice=(scr.nextLine()).toUpperCase();//
+                                        if(raiseChoice.equals("FOLD")){//
+                                            System.out.print("You fold, your opponent wins the pot of "+(bet*2));//
+                                            myScore=myScore-bet;//
+                                            oppScore=oppScore+bet;//
+                                            i=1;//
+                                        }else if(raiseChoice.equals("RAISE")){//
+                                            if(bet>myScore){//
+                                                System.out.print("You don't have that much money.\n");//
+                                            }else{//
+                                                System.out.print("Pot's raised to "+(bet*2)+"\n");//
+                                                i=1;//
+                                            }//
                                         }//
                                     }//
                                 }//These were added after origional creation
