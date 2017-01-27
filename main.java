@@ -99,6 +99,23 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 		return "High Card1";
 	}
 		
+        public static int oppBet(int oppScore){//This function was added after origional creation
+            double rnd=Math.random();
+            if(rnd>=0.5 && oppScore>=0){
+                return 0;
+            }else if(rnd>=0.4 && oppScore>=5){
+                return 5;
+            }else if(rnd>=0.3 && oppScore>=10){
+                return 10;
+            }else if(rnd>=0.2 && oppScore>=20){
+                return 20;
+            }else if(rnd>=0.1 && oppScore>=50){
+                return 50;
+            }else{
+                return 0;
+            }
+        }
+        
 	public static boolean oppFold(int bet){//This returns true if opponent folds
 		double rnd=Math.random();
 		if(bet>1001){//8/10
@@ -153,10 +170,14 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 			int bet=0;//These 2 vars are for the betting stuff
 			int amount;
 			if(x==0){
+                                bet+=10;//This line was added in after origional creation
 				System.out.print("You have a "+myCard1.cardName()+" and a "+myCard2.cardName()+"\n");
 				x++;
 			}
 			while(x==1){//Playing with both your cards
+                                if(oppBet(oppScore)!=0){
+                                    bet+=oppBet(oppScore);//WORKING ON THIS
+                                }
 				System.out.print("Do you want to bet, hold, view, or fold?\n");
 				Scanner scr=new Scanner(System.in);
 				String choice=(scr.nextLine()).toUpperCase();
@@ -315,7 +336,7 @@ public class main{//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,club
 				}
 				System.out.print("\nTotal pot was "+(bet*2));//Final results of the match
 				System.out.print("\nThe score is "+myScore+"(You) and "+oppScore+"(opponent)");
-				System.out.print("\nKeep going?\n");
+                                System.out.print("\nKeep going?\n");
 				Scanner scr=new Scanner(System.in);
 				String cont=(scr.nextLine()).toUpperCase();
 				if(cont.equals("NO")||myScore<=0||oppScore<=0){//The game stops if told so or if you/opponent run out of $$$ 
