@@ -336,7 +336,7 @@ public class Main {//card.numArr[0]==ace,2,3,4  card.numArr[1]=spades,hearts,clu
 			if(oppScore>myScore){
 				System.out.print("You quit like the wimp you are, also you lost "+(oppScore-myScore)+" so good job idiot.");
 			}else if(myScore>oppScore){
-				System.out.print("You quit like the winp you are, but you did make "+(myScore-oppScore)+" so ya got that going for ya.");
+				System.out.print("You quit like the wimp you are, but you did make "+(myScore-oppScore)+" so ya got that going for ya.");
 			}else{
 				System.out.print("Okay so you either decided to quit after the first round(loser for doing that) or you have extreme luck(loser for playing this game instead of buying a lottery ticket) so congratz.");
 			}
