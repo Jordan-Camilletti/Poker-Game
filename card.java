@@ -1,3 +1,5 @@
+//Created by Jordan Camilletti
+
 package main;
 
 public class card {//This creates a card with 4 values
