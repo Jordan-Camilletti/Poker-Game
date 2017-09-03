@@ -1,3 +1,6 @@
+/*This is just a text based poker game
+Created by Jordan Camilletti*/
+
 package main;
 
 import java.util.Scanner;
